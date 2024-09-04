@@ -68,13 +68,13 @@ body nav{
     justify-content: space-around;
     padding: 25px 0px;
     margin: 0px 0px;
-    box-shadow: 0px 12px 20px #212a1d;
+    box-shadow: 0px 12px 20px #33402C;
     position: relative;
     z-index: 1;
 }
 .nameright {
     flex-grow: 0;
-    justify-content: flex-end;
+    flex-shrink: 1;
     display: flex;
     justify-content: flex-end;
     width: 50%;
@@ -119,8 +119,9 @@ body nav{
 }
 #secondpic{
     border-radius: 50%;
-    height: 300px;
-    width: 300px;
+    height: auto;
+    width: 400px;
+    max-width: 100%;
     filter: brightness(1.25) contrast(-30);
     transition: transform 0.5s linear;
 }
@@ -132,6 +133,7 @@ body nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 20px;
 }
 .aboutright{
     text-align: center;
@@ -142,10 +144,12 @@ body nav{
     font-size: 17px;
     font-weight: 500;
 }
-.aboutleft{
+.aboutleft {
     flex-grow: 1;
+    flex-shrink: 1;
     overflow: hidden;
-    padding: 6px
+    padding: 6px;
+    width: 1500px;
 }
 .rest{
     display:flex;
@@ -309,8 +313,105 @@ body nav{
 }
 .attributes{
     text-align: right;
-    padding-right: 10px;
     font-family: "Playfair Display", serif;
     color: #E07745;
     font-size: 10px;
+    padding: 10px 10px 0px 0px;
+}
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Abril Fatface", serif;
+    font-size:40px;
+    letter-spacing: 1.5px;
+    color: #E07745;
+}
+.portinside{
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 2px;
+    font-size: 15px;
+    gap: 40px;
+}
+.portinside a{
+    text-decoration: none;
+    color: #F5EED9;
+    font-weight: 600;
+}
+.portinside a:hover{
+    transform: scale(1.02);
+}
+.itf, .mc, .ad{
+    width: 250px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 20px;
+    border-radius: 7%;
+    height: 500px;
+}
+.itf{
+    background-color: #33402C;
+    box-shadow: 0px 0px 10px #33402C;
+    position: relative;
+    z-index: 1;
+}
+.mc{
+    background-color: #F9A93B;
+    box-shadow: 0px 0px 10px #F9A93B;
+    position: relative;
+    z-index: 1;
+}
+.ad{
+    background-color: #E07745;
+    box-shadow: 0px 0px 10px #E07745;
+    position: relative;
+    z-index: 1;
+}
+.itf img, .mc img, .ad img{
+    width: 100%;
+    border-radius: 7%;
+}
+@media (max-width: 1000px) {
+    .name {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .nameright, .nameleft {
+        width: 100%;
+        padding: 0 0;
+        justify-content: center;
+        padding: 10px 0px 10px 0px;
+    }
+    .about {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    .aboutleft{
+        width: 100%;
+        max-width: 400px;
+    }
+    .rest {
+        flex-direction: column;
+    }
+    .restleft, .restright {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .natural{
+        padding: 0px 10px 0px 0px;
+    }
+    .programming{
+        padding: 0px 0px 0px 10px;
+    }
+    .portinside{
+        flex-direction: column;
+    }
 }
